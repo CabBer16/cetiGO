@@ -275,7 +275,60 @@ class CETIApp:
         self.label_resultado = ttk.Label(self.frame_resultados, text="", wraplength=350)
         self.label_resultado.pack()
 
-#aqui va tiempo opciones
+    def calcular_tiempo_opciones(self):
+        origen = self.combo_parada.get()
+        hora_salida = self.combo_hora.get()
+
+        if not origen:
+            messagebox.showerror("Error", "Por favor selecciona una parada")
+            return
+
+        if not hora_salida:
+            messagebox.showerror("Error", "Por favor selecciona una hora de salida")
+            return
+
+        self.mostrar_cuadro_carga("Calculando ruta y tiempos...")
+
+        self.root.after(100, lambda: self._calcular_tiempo_opciones(origen, hora_salida))
+
+    def _calcular_tiempo_opciones(self, origen, hora_salida):
+        distancia, ruta_paradas = dijkstra(origen, "CETI Colomos")
+
+        if distancia == float('inf'):
+            self.cerrar_cuadro_carga()
+            messagebox.showerror("Error", "No hay ruta disponible desde esa parada.")
+            return
+
+        distancia_total = self.mostrar_ruta_en_mapa(ruta_paradas, f"Ruta desde {origen} a CETI Colomos")
+
+        resultado = f"Ruta desde {origen}:\n\n"
+        hora_actual = hora_salida
+        tiempo_total = 0
+
+        for i in range(len(ruta_paradas)-1):
+            parada_actual = ruta_paradas[i]
+            parada_siguiente = ruta_paradas[i+1]
+            dist = calcular_distancia_real(paradas[parada_actual]["coords"], paradas[parada_siguiente]["coords"])
+            tiempo = calcular_tiempo_real(dist, hora_actual)
+            tiempo_total += tiempo
+
+            h, m = map(int, hora_actual.split(":"))
+            minutos_totales = h * 60 + m + int(round(tiempo))
+            hora_llegada = f"{(minutos_totales // 60) % 24:02d}:{minutos_totales % 60:02d}"
+
+            resultado += f"{parada_actual} → {parada_siguiente}:\n"
+            resultado += f"Distancia: {dist:.2f} km\n"
+            resultado += f"Tiempo estimado: {tiempo:.0f} min\n"
+            resultado += f"Hora estimada de llegada: {hora_llegada}\n\n"
+
+            hora_actual = hora_llegada 
+
+        resultado += f"Distancia total: {distancia_total:.1f} km\n"
+        resultado += f"Tiempo estimado total: {tiempo_total:.0f} minutos\n"
+        resultado += f"Hora aproximada de llegada a CETI Colomos: {hora_actual}"
+
+        self.label_resultado.config(text=resultado)
+        self.cerrar_cuadro_carga()
     
     def mostrar_todas_paradas(self):
         self.mostrar_mapa_inicial()
@@ -332,7 +385,70 @@ class CETIApp:
         
         messagebox.showinfo("Información de Ruta", info)
     
-    #aqui hace el regreso 
+    def elegir_ruta_regreso(self):
+        rutas_regreso = {
+            "1": {
+                "nombre": "Regreso Ruta 1: CETI Colomos → Plaza Patria → Zapopan Norte",
+                "paradas": ["CETI Colomos", "Plaza Patria", "Zapopan Norte"]
+            },
+            "2": {
+                "nombre": "Regreso Ruta 2: CETI Colomos → Plaza de la Bandera → Paradero Tlaquepaque → Tonala",
+                "paradas": ["CETI Colomos", "Plaza de la Bandera", "Paradero Tlaquepaque", "Tonala"]
+            },
+            "3": {
+                "nombre": "Regreso Ruta 3: CETI Colomos → Glorieta Minerva → Plaza del Sol",
+                "paradas": ["CETI Colomos", "Glorieta Minerva", "Plaza del Sol"]
+            }
+        }
+
+        popup = tk.Toplevel(self.root)
+        popup.title("Rutas de Regreso")
+        popup.geometry("500x350")
+        ttk.Label(popup, text="Selecciona una ruta de regreso:", style='Header.TLabel').pack(pady=10)
+
+        frame_rutas = ttk.Frame(popup)
+        frame_rutas.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
+
+        for i, (clave, datos) in enumerate(rutas_regreso.items()):
+            btn = ttk.Button(
+                frame_rutas,
+                text=datos["nombre"],
+                command=lambda d=datos: self.mostrar_ruta_regreso(d)
+            )
+            btn.pack(fill=tk.X, pady=5)
+
+    def mostrar_ruta_regreso(self, datos_ruta):
+        popup = tk.Toplevel(self.root)
+        popup.title("Horario de Regreso")
+        popup.geometry("350x200")
+        ttk.Label(popup, text="Selecciona el horario de salida desde CETI:", style='Header.TLabel').pack(pady=10)
+
+        horarios = ["15:00", "21:30"]
+        self.hora_regreso = tk.StringVar(value=horarios[0])
+        combo = ttk.Combobox(popup, values=horarios, textvariable=self.hora_regreso, state="readonly")
+        combo.pack(pady=10)
+        combo.current(0)
+
+        def calcular_y_mostrar():
+            popup.destroy()
+            distancia_total = 0
+            for i in range(len(datos_ruta["paradas"])-1):
+                origen = datos_ruta["paradas"][i]
+                destino = datos_ruta["paradas"][i+1]
+                distancia_total += calcular_distancia_real(
+                    paradas[origen]["coords"],
+                    paradas[destino]["coords"]
+                )
+            self.mostrar_ruta_en_mapa(datos_ruta["paradas"], datos_ruta["nombre"])
+            tiempo_total = calcular_tiempo_real(distancia_total, self.hora_regreso.get())
+            info = f"{datos_ruta['nombre']}\n\n"
+            info += f"Distancia total: {distancia_total:.2f} km\n"
+            info += f"Tiempo estimado: {tiempo_total:.0f} minutos\n"
+            info += f"Hora de salida: {self.hora_regreso.get()}\n\n"
+            info += f"Paradas:\n" + "\n".join(f"• {p}" for p in datos_ruta["paradas"])
+            messagebox.showinfo("Información de Ruta de Regreso", info)
+
+        ttk.Button(popup, text="Calcular y Mostrar Ruta", command=calcular_y_mostrar).pack(pady=20)
     
     def mostrar_cuadro_carga(self, mensaje="Cargando..."):
         self.cuadro_carga = tk.Toplevel(self.root)
