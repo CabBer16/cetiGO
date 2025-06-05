@@ -115,6 +115,29 @@ def mostrar_mapa_ruta_calle(origen, destino):
     mapa.save("ruta_calles.html")
     print("Mapa con ruta por calles guardado como 'ruta_calles.html'")
 
+def calcular_tiempo_real(distancia_km, hora_dia):
+
+    factores_trafico = {
+        "mañana": 3.0, 
+        "medio_dia": 1.8,
+        "tarde": 2.5,
+        "noche": 2.0
+    }
+    
+    hora = int(hora_dia.split(":")[0])
+    if 6 <= hora < 9:
+        factor = factores_trafico["mañana"]
+    elif 1 <= hora < 14:
+        factor = factores_trafico["medio_dia"]
+    elif 15 <= hora < 20:
+        factor = factores_trafico["tarde"]
+    else:
+        factor = factores_trafico["noche"]
+    
+    velocidad_promedio = 50  
+    
+    tiempo_minutos = (distancia_km / velocidad_promedio) * 60 * factor
+    return tiempo_minutos
 
 def construir_grafo_nx(grafo_dict):
     G = nx.Graph()
@@ -158,7 +181,34 @@ def dijkstra(inicio, destino):
     
     return distancias.get(destino, float('inf')), rutas.get(destino, [])
 
+def mostrar_mapa(ruta=None):
+    mapa = folium.Map(location=[20.7069, -103.3996], zoom_start=13)
 
+    for parada, data in paradas.items():
+        folium.Marker(
+            location=data["coords"],
+            popup=parada,
+            icon=folium.Icon(color="blue", icon="bus", prefix="fa")
+        ).add_to(mapa)
+    
+    if ruta:
+        coords_ruta = [paradas[p]["coords"] for p in ruta if p in paradas]
+        folium.PolyLine(
+            coords_ruta,
+            color="green",
+            weight=2.5,
+            opacity=1
+        ).add_to(mapa)
+    
+    folium.Marker(
+        location=paradas["CETI Colomos"]["coords"],
+        popup="CETI Colomos (Destino)",
+        icon=folium.Icon(color="red", icon="graduation-cap", prefix="fa")
+    ).add_to(mapa)
+    
+    mapa.save("ruta_transporte.html")
+    print("\nMapa generado como 'ruta_transporte.html'. Ábrelo en tu navegador.")
+    
 def mostrar_ruta():
     print("\nRuta fija del camión:")
     ruta_completa = [
@@ -233,6 +283,56 @@ def mostrar_ruta():
     mapa.save("ruta_completa_calles.html")
     print("\nMapa con ruta completa por calles generado como 'ruta_completa_calles.html'")
 
+def calcular_tiempo_llegada():
+    print("\nParadas disponibles:")
+    for i, parada in enumerate(grafo.keys(), 1):
+        print(f"{i}. {parada}")
+    
+    try:
+        opcion = int(input("\nSelecciona el número de tu parada: "))
+        origen = list(grafo.keys())[opcion-1]
+        hora_salida = input("Ingresa tu hora de salida (HH:MM, formato 24h): ")
+    except (ValueError, IndexError):
+        print("Opción no válida.")
+        return
+    
+    distancia_total, ruta = dijkstra(origen, "CETI Colomos")
+    
+    if distancia_total == float('inf'):
+        print("No hay ruta disponible desde esa parada.")
+        return
+
+    print(f"\nRuta recomendada desde {origen}:")
+    print(f"Hora de salida: {hora_salida}")
+    hora_actual = hora_salida
+    tiempo_acumulado = 0
+
+    for i in range(len(ruta)-1):
+        parada_actual = ruta[i]
+        parada_siguiente = ruta[i+1]
+        dist = calcular_distancia_real(paradas[parada_actual]["coords"], paradas[parada_siguiente]["coords"])
+        tiempo = calcular_tiempo_real(dist, hora_actual)
+        tiempo_acumulado += tiempo
+
+        h, m = map(int, hora_actual.split(":"))
+        minutos_totales = h * 60 + m + int(round(tiempo))
+        hora_llegada = f"{(minutos_totales // 60) % 24:02d}:{minutos_totales % 60:02d}"
+
+        print(f"{i+1}. {parada_actual} → {parada_siguiente}:")
+        print(f"   Distancia: {dist:.2f} km")
+        print(f"   Tiempo estimado: {tiempo:.0f} min")
+        print(f"   Hora estimada de llegada: {hora_llegada}")
+
+        hora_actual = hora_llegada  
+
+    print(f"\nDistancia total: {distancia_total:.1f} km")
+    print(f"Tiempo estimado total de llegada: {tiempo_acumulado:.0f} minutos")
+    print(f"Hora aproximada de llegada a CETI Colomos: {hora_actual}")
+
+    if input("\n¿Ver ruta por calles? (s/n): ").lower() == 's':
+        mostrar_mapa_ruta_calle(origen, "CETI Colomos")
+    else:
+        mostrar_mapa(ruta)
 
 def elegir_ruta_personalizada():
     rutas_disponibles = {
