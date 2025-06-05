@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a14d922965dbf7df32ce8b39d419a141 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a14d922965dbf7df32ce8b39d419a141" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a14d922965dbf7df32ce8b39d419a141 = L.map(
+                "map_a14d922965dbf7df32ce8b39d419a141",
+                {
+                    center: [20.7069, -103.3996],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_393a9be39f95ebfe722159675be7ad0a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_393a9be39f95ebfe722159675be7ad0a.addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var marker_74b9ec152ff000e1ba8471074d21afcf = L.marker(
+                [20.6236, -103.2345],
+                {
+}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var icon_88b638549e3175d563c3a0864524013e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed2019ae94d891b81714ce639f919f7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_610b88a65df597b77f1432651f09a9af = $(`<div id="html_610b88a65df597b77f1432651f09a9af" style="width: 100.0%; height: 100.0%;">Tonala</div>`)[0];
+                popup_ed2019ae94d891b81714ce639f919f7f.setContent(html_610b88a65df597b77f1432651f09a9af);
+            
+        
+
+        marker_74b9ec152ff000e1ba8471074d21afcf.bindPopup(popup_ed2019ae94d891b81714ce639f919f7f)
+        ;
+
+        
+    
+    
+                marker_74b9ec152ff000e1ba8471074d21afcf.setIcon(icon_88b638549e3175d563c3a0864524013e);
+            
+    
+            var marker_1faf5a3461a8d4fbc2b23fc30c79fa60 = L.marker(
+                [20.6402, -103.3118],
+                {
+}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var icon_15b3f288061b5746c34a6ad2edd743d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86acce1870d731386d9939b8cd1bc4ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66573015808eddf1295a9fbe6799c2ee = $(`<div id="html_66573015808eddf1295a9fbe6799c2ee" style="width: 100.0%; height: 100.0%;">Paradero Tlaquepaque</div>`)[0];
+                popup_86acce1870d731386d9939b8cd1bc4ed.setContent(html_66573015808eddf1295a9fbe6799c2ee);
+            
+        
+
+        marker_1faf5a3461a8d4fbc2b23fc30c79fa60.bindPopup(popup_86acce1870d731386d9939b8cd1bc4ed)
+        ;
+
+        
+    
+    
+                marker_1faf5a3461a8d4fbc2b23fc30c79fa60.setIcon(icon_15b3f288061b5746c34a6ad2edd743d9);
+            
+    
+            var marker_81d126d6b8953a3bb23b18465223a2b8 = L.marker(
+                [20.66524, -103.33268],
+                {
+}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var icon_9d198d15b12e474c17b33c63135313d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5be5845d11d9bbb26366d0e7c3a4db3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7aec11b72122663afa65b8c5d3f345a5 = $(`<div id="html_7aec11b72122663afa65b8c5d3f345a5" style="width: 100.0%; height: 100.0%;">Plaza de la Bandera</div>`)[0];
+                popup_c5be5845d11d9bbb26366d0e7c3a4db3.setContent(html_7aec11b72122663afa65b8c5d3f345a5);
+            
+        
+
+        marker_81d126d6b8953a3bb23b18465223a2b8.bindPopup(popup_c5be5845d11d9bbb26366d0e7c3a4db3)
+        ;
+
+        
+    
+    
+                marker_81d126d6b8953a3bb23b18465223a2b8.setIcon(icon_9d198d15b12e474c17b33c63135313d6);
+            
+    
+            var marker_60de73327230e25b910fff8c37522b5f = L.marker(
+                [20.67453, -103.38741],
+                {
+}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var icon_85bd10e7cd9defb428f0800a27cd8ce7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42941e8543865842d8610fa6016a7940 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b850ec19a49e62aac5aeb4108bb17a31 = $(`<div id="html_b850ec19a49e62aac5aeb4108bb17a31" style="width: 100.0%; height: 100.0%;">Glorieta Minerva</div>`)[0];
+                popup_42941e8543865842d8610fa6016a7940.setContent(html_b850ec19a49e62aac5aeb4108bb17a31);
+            
+        
+
+        marker_60de73327230e25b910fff8c37522b5f.bindPopup(popup_42941e8543865842d8610fa6016a7940)
+        ;
+
+        
+    
+    
+                marker_60de73327230e25b910fff8c37522b5f.setIcon(icon_85bd10e7cd9defb428f0800a27cd8ce7);
+            
+    
+            var marker_6d8c96e2051545096e47cdc1933a6f7b = L.marker(
+                [20.64941, -103.4026],
+                {
+}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var icon_2a91238cf13b43feb357cc320cc069f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51506997cfe4c39ed1cf66dda1cac1b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_218c9efe83c73aeb6c94021c51ba47ff = $(`<div id="html_218c9efe83c73aeb6c94021c51ba47ff" style="width: 100.0%; height: 100.0%;">Plaza del Sol</div>`)[0];
+                popup_51506997cfe4c39ed1cf66dda1cac1b8.setContent(html_218c9efe83c73aeb6c94021c51ba47ff);
+            
+        
+
+        marker_6d8c96e2051545096e47cdc1933a6f7b.bindPopup(popup_51506997cfe4c39ed1cf66dda1cac1b8)
+        ;
+
+        
+    
+    
+                marker_6d8c96e2051545096e47cdc1933a6f7b.setIcon(icon_2a91238cf13b43feb357cc320cc069f6);
+            
+    
+            var marker_b1299cd6ede7b1835f2d2fc6ca65db32 = L.marker(
+                [20.74178, -103.40731],
+                {
+}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var icon_80330522cf330c901ff04ed2c06b2819 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fecb18d4b48aa9d210ff2a2c161865cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c86c3533b6fad714ab46fec1d2f6547 = $(`<div id="html_5c86c3533b6fad714ab46fec1d2f6547" style="width: 100.0%; height: 100.0%;">Zapopan Norte</div>`)[0];
+                popup_fecb18d4b48aa9d210ff2a2c161865cb.setContent(html_5c86c3533b6fad714ab46fec1d2f6547);
+            
+        
+
+        marker_b1299cd6ede7b1835f2d2fc6ca65db32.bindPopup(popup_fecb18d4b48aa9d210ff2a2c161865cb)
+        ;
+
+        
+    
+    
+                marker_b1299cd6ede7b1835f2d2fc6ca65db32.setIcon(icon_80330522cf330c901ff04ed2c06b2819);
+            
+    
+            var marker_7140b9b85e6bcf9a999e47170eda1b43 = L.marker(
+                [20.70312, -103.38929],
+                {
+}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var icon_e19b1a7f5b963b4f0fa69ec9c868a4c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1365ca610f3940536b26a052f6139f6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffd30aa1963037be2f37f65cd49fce7a = $(`<div id="html_ffd30aa1963037be2f37f65cd49fce7a" style="width: 100.0%; height: 100.0%;">CETI Colomos</div>`)[0];
+                popup_1365ca610f3940536b26a052f6139f6a.setContent(html_ffd30aa1963037be2f37f65cd49fce7a);
+            
+        
+
+        marker_7140b9b85e6bcf9a999e47170eda1b43.bindPopup(popup_1365ca610f3940536b26a052f6139f6a)
+        ;
+
+        
+    
+    
+                marker_7140b9b85e6bcf9a999e47170eda1b43.setIcon(icon_e19b1a7f5b963b4f0fa69ec9c868a4c5);
+            
+    
+            var poly_line_29fdc53eb0184e7299aae11337bb8d90 = L.polyline(
+                [[20.6460512, -103.2730086], [20.6462216, -103.2739582], [20.6455667, -103.2744562], [20.6449662, -103.2748482], [20.644333, -103.2753818], [20.644253, -103.2754894], [20.6442265, -103.275536], [20.6441989, -103.275634], [20.6441348, -103.2760433], [20.644112, -103.2764417], [20.6441013, -103.2767988], [20.6434986, -103.2783091], [20.6433396, -103.2794611], [20.6431381, -103.2796616], [20.6433404, -103.2800493], [20.6437108, -103.2807553], [20.6437824, -103.2809411], [20.6444267, -103.2832085], [20.6446001, -103.2841508], [20.6446861, -103.2848732], [20.6444623, -103.2866492], [20.6444, -103.2869059], [20.6442402, -103.2885772], [20.6444201, -103.2902785], [20.6445348, -103.291513], [20.6446933, -103.2930013], [20.6448813, -103.2947067], [20.6450986, -103.2966218], [20.6452269, -103.2980374], [20.645379, -103.2994375], [20.6455323, -103.3008473], [20.6455457, -103.300975], [20.645545, -103.3027013], [20.6448727, -103.3040863], [20.6448119, -103.3042077], [20.6445378, -103.3047764], [20.6443372, -103.3060831], [20.6445112, -103.3066972], [20.6444309, -103.3067163], [20.6438198, -103.3067951], [20.643862, -103.3073313], [20.6438961, -103.3077556], [20.6439684, -103.3086612], [20.6440325, -103.3094534], [20.6441254, -103.3103022], [20.6441642, -103.3108936], [20.6442083, -103.311608]],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+        var popup_b1d358618e50ebdba1951dc1cd165bdb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53de87f8742e00d6218bdc5b72e27e87 = $(`<div id="html_53de87f8742e00d6218bdc5b72e27e87" style="width: 100.0%; height: 100.0%;">Segmento 1: Tonala a Paradero Tlaquepaque</div>`)[0];
+                popup_b1d358618e50ebdba1951dc1cd165bdb.setContent(html_53de87f8742e00d6218bdc5b72e27e87);
+            
+        
+
+        poly_line_29fdc53eb0184e7299aae11337bb8d90.bindPopup(popup_b1d358618e50ebdba1951dc1cd165bdb)
+        ;
+
+        
+    
+    
+            var poly_line_61e7278240034a72c204aa0c350d4acf = L.polyline(
+                [[20.6402, -103.3118], [20.66524, -103.33268]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var poly_line_7f77cdb1691aa4a1fed9fb49c2a1bb24 = L.polyline(
+                [[20.6650458, -103.3324628], [20.6653717, -103.3329831], [20.6663055, -103.3341933], [20.6672252, -103.3352904], [20.667849, -103.336954], [20.6680502, -103.337515], [20.6683357, -103.3383119], [20.6688295, -103.3396878], [20.6690925, -103.3404152], [20.6693455, -103.3411037], [20.6697751, -103.3421699], [20.6699924, -103.3426708], [20.6703466, -103.3434978], [20.6705174, -103.3438712], [20.6706988, -103.3441434], [20.6707217, -103.344182], [20.6707808, -103.3442807], [20.6707986, -103.3443103], [20.6710007, -103.3446425], [20.6715313, -103.345808], [20.6716907, -103.3462613], [20.6717333, -103.3471497], [20.6717722, -103.3472312], [20.6720445, -103.347881], [20.6720543, -103.348688], [20.6720726, -103.349562], [20.6720833, -103.350745], [20.6721156, -103.351619], [20.672136, -103.352509], [20.6721567, -103.353569], [20.6721841, -103.3546946], [20.6721871, -103.3548556], [20.672204, -103.355741], [20.672226, -103.3567972], [20.6722338, -103.3577313], [20.6722528, -103.3585229], [20.6722598, -103.3593828], [20.6726687, -103.3593857], [20.673345, -103.359386], [20.6739952, -103.3593876], [20.6747928, -103.3594116], [20.6747666, -103.3604447], [20.6747429, -103.3613801], [20.6747185, -103.3623434], [20.6746775, -103.3639614], [20.6746499, -103.3650513], [20.6746222, -103.3661465], [20.6745946, -103.3672347], [20.6745622, -103.3685161], [20.6745567, -103.368732], [20.6745062, -103.3705732], [20.6744765, -103.3716545], [20.6744497, -103.3726312], [20.6744209, -103.3736814], [20.6744209, -103.3737672], [20.674421, -103.3748207], [20.674421, -103.3761702], [20.6744211, -103.3773085], [20.6744213, -103.3774268], [20.674423, -103.3786628], [20.6744249, -103.3799928], [20.6744268, -103.3813262], [20.6744287, -103.3826666], [20.6744304, -103.3839088], [20.6744554, -103.3840352], [20.6744703, -103.38466], [20.6744738, -103.3853435], [20.6744728, -103.3854478], [20.6744793, -103.3860481], [20.6745787, -103.3869469], [20.6746461, -103.3869767], [20.674868, -103.3874592], [20.6748389, -103.3875609]],
+                {"bubblingMouseEvents": true, "color": "#009c40", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#009c40", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+        var popup_91f2dd53340a2b7b0c60c919b068e2ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a09a6c4bb4814d081cb2d30c2bc5ce9 = $(`<div id="html_9a09a6c4bb4814d081cb2d30c2bc5ce9" style="width: 100.0%; height: 100.0%;">Segmento 3: Plaza de la Bandera a Glorieta Minerva</div>`)[0];
+                popup_91f2dd53340a2b7b0c60c919b068e2ff.setContent(html_9a09a6c4bb4814d081cb2d30c2bc5ce9);
+            
+        
+
+        poly_line_7f77cdb1691aa4a1fed9fb49c2a1bb24.bindPopup(popup_91f2dd53340a2b7b0c60c919b068e2ff)
+        ;
+
+        
+    
+    
+            var poly_line_b5109fc11a15e7d8a9d489c3cac8ee6c = L.polyline(
+                [[20.6748389, -103.3875609], [20.6746736, -103.387764], [20.6746427, -103.3877825], [20.6743346, -103.387814], [20.6742698, -103.3877879], [20.6742081, -103.3877496], [20.6740273, -103.387366], [20.6740911, -103.3871399], [20.6733467, -103.3866079], [20.672163, -103.3857586], [20.6713127, -103.3851549], [20.670783, -103.3847899], [20.6706292, -103.3847866], [20.6699447, -103.3848245], [20.6689872, -103.3848038], [20.6686128, -103.3847673], [20.6685273, -103.3847179], [20.6682035, -103.3846836], [20.6677061, -103.3846302], [20.6668198, -103.384537], [20.6666409, -103.3847675], [20.6666293, -103.38548], [20.6665087, -103.3856426], [20.6656854, -103.3857704], [20.6648617, -103.3857944], [20.664034, -103.3858042], [20.6630608, -103.3858505], [20.6621253, -103.3859045], [20.6609245, -103.3859196], [20.6602689, -103.3859236], [20.6592862, -103.385936], [20.6584006, -103.3859063], [20.6582999, -103.3859066], [20.6581407, -103.3859103], [20.6572714, -103.3859057], [20.6558355, -103.3858982], [20.6546255, -103.3860418], [20.6547112, -103.3867598], [20.654923, -103.3885645], [20.6549371, -103.3886723], [20.6527332, -103.3892134], [20.6525827, -103.3892548], [20.6497637, -103.3895828], [20.6477451, -103.3900017], [20.6475804, -103.3907308], [20.6475585, -103.3907682], [20.6475408, -103.391396], [20.6476995, -103.3921354], [20.6478618, -103.3928755], [20.6480615, -103.3936395], [20.6481737, -103.393643], [20.648237, -103.3938728], [20.6481905, -103.3939087], [20.6482994, -103.3947078], [20.6519301, -103.3948276], [20.6509022, -103.3966135], [20.6502415, -103.3977563], [20.6497005, -103.3986921], [20.650459, -103.3991807]],
+                {"bubblingMouseEvents": true, "color": "#00ea60", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#00ea60", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+        var popup_391d82f446c17e8d0458a92a62e085f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f82025045611f6d6b87c56803ef17e24 = $(`<div id="html_f82025045611f6d6b87c56803ef17e24" style="width: 100.0%; height: 100.0%;">Segmento 4: Glorieta Minerva a Plaza del Sol</div>`)[0];
+                popup_391d82f446c17e8d0458a92a62e085f0.setContent(html_f82025045611f6d6b87c56803ef17e24);
+            
+        
+
+        poly_line_b5109fc11a15e7d8a9d489c3cac8ee6c.bindPopup(popup_391d82f446c17e8d0458a92a62e085f0)
+        ;
+
+        
+    
+    
+            var poly_line_e5ebcdf689b10e7d006885e17e9c0fd8 = L.polyline(
+                [[20.650459, -103.3991807], [20.6505721, -103.398985], [20.6506126, -103.3989153], [20.6508028, -103.3985877], [20.6516614, -103.397109], [20.6527465, -103.3952486], [20.6536134, -103.3937623], [20.65373, -103.3937652], [20.6550054, -103.3915553], [20.655065, -103.391457], [20.6551584, -103.3915212], [20.655852, -103.3919771], [20.6563947, -103.3923323], [20.657557, -103.3931041], [20.6576398, -103.3931664], [20.657823, -103.3933454], [20.6579081, -103.3934937], [20.6581701, -103.3935671], [20.6587708, -103.3939096], [20.6593259, -103.394246], [20.6600099, -103.3946605], [20.6600758, -103.3947488], [20.6604566, -103.3956754], [20.660773, -103.3962936], [20.6621987, -103.3953472], [20.6623217, -103.3952668], [20.6625554, -103.3952081], [20.6688213, -103.3910382], [20.6712815, -103.38941], [20.6721412, -103.3887396], [20.673263, -103.3880024], [20.6740273, -103.387366], [20.6740911, -103.3871399], [20.6741962, -103.3870169], [20.6745787, -103.3869469], [20.6746461, -103.3869767], [20.6755172, -103.386541], [20.6756216, -103.3867525], [20.6757572, -103.387297], [20.6767552, -103.3873116], [20.6777222, -103.3873269], [20.678593, -103.3873136], [20.679553, -103.3873024], [20.6795513, -103.3872366], [20.6795477, -103.3871589], [20.6795461, -103.3870638], [20.6796274, -103.3870625], [20.6797244, -103.3870635], [20.6797265, -103.3871566], [20.6797281, -103.387232], [20.6797247, -103.388076], [20.68056, -103.3880463], [20.6838602, -103.3890875], [20.6847053, -103.3893194], [20.6848375, -103.3893594], [20.6856006, -103.3896037], [20.6861759, -103.3897835], [20.6867789, -103.3899996], [20.6874633, -103.3902293], [20.6875978, -103.3902745], [20.6882815, -103.3904931], [20.6889115, -103.3906946], [20.6896104, -103.3909181], [20.6903137, -103.391143], [20.6908273, -103.3913072], [20.6910786, -103.3913955], [20.6915129, -103.3915481], [20.6917233, -103.391626], [20.692109, -103.3917549], [20.6922258, -103.3917939], [20.6927403, -103.3919659], [20.6932386, -103.3921324], [20.6937225, -103.3922941], [20.6943188, -103.3924865], [20.6949083, -103.3926677], [20.6950933, -103.3927395], [20.6950023, -103.3931325], [20.6945513, -103.3939285], [20.6939103, -103.3946923], [20.6943262, -103.3950152], [20.6944685, -103.3951257], [20.6952702, -103.3957481], [20.695593, -103.3958779], [20.6956544, -103.3958377], [20.6959423, -103.3959744], [20.6959384, -103.3961462], [20.6966031, -103.3967832], [20.6971711, -103.3972344], [20.6980751, -103.3979263], [20.6988757, -103.3985395], [20.700789, -103.4000323], [20.7024028, -103.4012973], [20.7038829, -103.4024516], [20.7049868, -103.4032942], [20.7050812, -103.4033679], [20.705294, -103.4035324], [20.7054241, -103.403633], [20.7054828, -103.4036782], [20.7055763, -103.4037538], [20.7059303, -103.4040227], [20.7060891, -103.4041455], [20.7095971, -103.4067033], [20.7096758, -103.4066706], [20.7105704, -103.4064207], [20.7115509, -103.4043048]],
+                {"bubblingMouseEvents": true, "color": "#013880", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#013880", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+        var popup_1483fac785c354dae8f925b8a5cd5f58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b51185185d2ba9ff3675ed73ab8428ec = $(`<div id="html_b51185185d2ba9ff3675ed73ab8428ec" style="width: 100.0%; height: 100.0%;">Segmento 5: Plaza del Sol a Zapopan Norte</div>`)[0];
+                popup_1483fac785c354dae8f925b8a5cd5f58.setContent(html_b51185185d2ba9ff3675ed73ab8428ec);
+            
+        
+
+        poly_line_e5ebcdf689b10e7d006885e17e9c0fd8.bindPopup(popup_1483fac785c354dae8f925b8a5cd5f58)
+        ;
+
+        
+    
+    
+            var poly_line_9cc4a82a8dc3ccd5a7e1429eed468d49 = L.polyline(
+                [[20.7115509, -103.4043048], [20.7115048, -103.3982471], [20.7118349, -103.397265], [20.7096038, -103.3917537], [20.7096781, -103.3887697], [20.7097375, -103.3883106], [20.7090521, -103.3885049], [20.7086052, -103.3886234], [20.7075927, -103.3886232], [20.7073723, -103.3885916], [20.7065101, -103.3879957], [20.7054175, -103.3871292], [20.7053241, -103.3870756], [20.7046721, -103.3867273], [20.7040371, -103.3863936], [20.703718, -103.3862044], [20.7038672, -103.3873599], [20.7038292, -103.3879983], [20.7022332, -103.3882344]],
+                {"bubblingMouseEvents": true, "color": "#0186a0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#0186a0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+        var popup_1de1314cb1aca20eb0669c9898dbe1ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9cd45b2766c77221c2bd4eda55d7972 = $(`<div id="html_c9cd45b2766c77221c2bd4eda55d7972" style="width: 100.0%; height: 100.0%;">Segmento 6: Zapopan Norte a CETI Colomos</div>`)[0];
+                popup_1de1314cb1aca20eb0669c9898dbe1ac.setContent(html_c9cd45b2766c77221c2bd4eda55d7972);
+            
+        
+
+        poly_line_9cc4a82a8dc3ccd5a7e1429eed468d49.bindPopup(popup_1de1314cb1aca20eb0669c9898dbe1ac)
+        ;
+
+        
+    
+    
+            var marker_2bd2326b77f750546b7ae2af2dce69e4 = L.marker(
+                [20.70312, -103.38929],
+                {
+}
+            ).addTo(map_a14d922965dbf7df32ce8b39d419a141);
+        
+    
+            var icon_210f5d48b8b859f44acebf4732bf286a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68d6ffa81c12484449f4d8fb43dd347d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4197c7a96ef4dec96b9224f2834b68b = $(`<div id="html_f4197c7a96ef4dec96b9224f2834b68b" style="width: 100.0%; height: 100.0%;">CETI Colomos (Destino)</div>`)[0];
+                popup_68d6ffa81c12484449f4d8fb43dd347d.setContent(html_f4197c7a96ef4dec96b9224f2834b68b);
+            
+        
+
+        marker_2bd2326b77f750546b7ae2af2dce69e4.bindPopup(popup_68d6ffa81c12484449f4d8fb43dd347d)
+        ;
+
+        
+    
+    
+                marker_2bd2326b77f750546b7ae2af2dce69e4.setIcon(icon_210f5d48b8b859f44acebf4732bf286a);
+            
+</script>
+</html>

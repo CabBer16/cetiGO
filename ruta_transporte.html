@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0c72008edfdeae782b687870eb6bcd41 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0c72008edfdeae782b687870eb6bcd41" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0c72008edfdeae782b687870eb6bcd41 = L.map(
+                "map_0c72008edfdeae782b687870eb6bcd41",
+                {
+                    center: [20.7069, -103.3996],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_37c23579614d1458b655ce9adde8882e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_37c23579614d1458b655ce9adde8882e.addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var marker_4333ac49a86c483971f9c814af672ef8 = L.marker(
+                [20.71218, -103.37844],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_2bcfef00a03a24c5783f8fce0ecde552 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b3384c46ac797ad3bd15ef515f1c35a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a5336921ae16ec3d1a7e57771530f28 = $(`<div id="html_5a5336921ae16ec3d1a7e57771530f28" style="width: 100.0%; height: 100.0%;">Plaza Patria</div>`)[0];
+                popup_0b3384c46ac797ad3bd15ef515f1c35a.setContent(html_5a5336921ae16ec3d1a7e57771530f28);
+            
+        
+
+        marker_4333ac49a86c483971f9c814af672ef8.bindPopup(popup_0b3384c46ac797ad3bd15ef515f1c35a)
+        ;
+
+        
+    
+    
+                marker_4333ac49a86c483971f9c814af672ef8.setIcon(icon_2bcfef00a03a24c5783f8fce0ecde552);
+            
+    
+            var marker_8d3467d5f219f92aadd60f44d4e02c39 = L.marker(
+                [20.67453, -103.38741],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_7a698ffc88e87490c5872637371a2118 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca55dd0456fc3a2608707ce4d07ad6c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce3088a78375d202b28e91069e428eef = $(`<div id="html_ce3088a78375d202b28e91069e428eef" style="width: 100.0%; height: 100.0%;">Glorieta Minerva</div>`)[0];
+                popup_ca55dd0456fc3a2608707ce4d07ad6c7.setContent(html_ce3088a78375d202b28e91069e428eef);
+            
+        
+
+        marker_8d3467d5f219f92aadd60f44d4e02c39.bindPopup(popup_ca55dd0456fc3a2608707ce4d07ad6c7)
+        ;
+
+        
+    
+    
+                marker_8d3467d5f219f92aadd60f44d4e02c39.setIcon(icon_7a698ffc88e87490c5872637371a2118);
+            
+    
+            var marker_7a132750306f724c75a8feee15783d98 = L.marker(
+                [20.6236, -103.2345],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_fa0b1edbb2367dbb4d61f0419f3f7523 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dec326802163b47501ca6fd39d286905 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6981e6ebbec576ce61cac711893883bf = $(`<div id="html_6981e6ebbec576ce61cac711893883bf" style="width: 100.0%; height: 100.0%;">Tonala</div>`)[0];
+                popup_dec326802163b47501ca6fd39d286905.setContent(html_6981e6ebbec576ce61cac711893883bf);
+            
+        
+
+        marker_7a132750306f724c75a8feee15783d98.bindPopup(popup_dec326802163b47501ca6fd39d286905)
+        ;
+
+        
+    
+    
+                marker_7a132750306f724c75a8feee15783d98.setIcon(icon_fa0b1edbb2367dbb4d61f0419f3f7523);
+            
+    
+            var marker_700a8074ab81a394ad3f10489fe85d18 = L.marker(
+                [20.6402, -103.3118],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_1ceaa2f8759d5ccf928d887fc9501f38 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89aebee70a92a227b0df9776254d338e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88c69efdc3e9d2268d211978fa1ddbd3 = $(`<div id="html_88c69efdc3e9d2268d211978fa1ddbd3" style="width: 100.0%; height: 100.0%;">Paradero Tlaquepaque</div>`)[0];
+                popup_89aebee70a92a227b0df9776254d338e.setContent(html_88c69efdc3e9d2268d211978fa1ddbd3);
+            
+        
+
+        marker_700a8074ab81a394ad3f10489fe85d18.bindPopup(popup_89aebee70a92a227b0df9776254d338e)
+        ;
+
+        
+    
+    
+                marker_700a8074ab81a394ad3f10489fe85d18.setIcon(icon_1ceaa2f8759d5ccf928d887fc9501f38);
+            
+    
+            var marker_e30edda80d69580417ce01d77a543ca8 = L.marker(
+                [20.64941, -103.4026],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_f7874587d6e1bf365d67d05586f90783 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c10a8b0b45d237aa67c8c2bbc6fc817 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_781457baaad05c2613b27178e7a304ea = $(`<div id="html_781457baaad05c2613b27178e7a304ea" style="width: 100.0%; height: 100.0%;">Plaza del Sol</div>`)[0];
+                popup_6c10a8b0b45d237aa67c8c2bbc6fc817.setContent(html_781457baaad05c2613b27178e7a304ea);
+            
+        
+
+        marker_e30edda80d69580417ce01d77a543ca8.bindPopup(popup_6c10a8b0b45d237aa67c8c2bbc6fc817)
+        ;
+
+        
+    
+    
+                marker_e30edda80d69580417ce01d77a543ca8.setIcon(icon_f7874587d6e1bf365d67d05586f90783);
+            
+    
+            var marker_f02ab2e8e164a8897a0fff2bdef80c9f = L.marker(
+                [20.74178, -103.40731],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_06adaf5efe4c0fc69dfe5a6778b597ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b64269532b77bd93fa959ba7595ca1ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68e47d63c179a6ca63b6a6381ebdcb72 = $(`<div id="html_68e47d63c179a6ca63b6a6381ebdcb72" style="width: 100.0%; height: 100.0%;">Zapopan Norte</div>`)[0];
+                popup_b64269532b77bd93fa959ba7595ca1ac.setContent(html_68e47d63c179a6ca63b6a6381ebdcb72);
+            
+        
+
+        marker_f02ab2e8e164a8897a0fff2bdef80c9f.bindPopup(popup_b64269532b77bd93fa959ba7595ca1ac)
+        ;
+
+        
+    
+    
+                marker_f02ab2e8e164a8897a0fff2bdef80c9f.setIcon(icon_06adaf5efe4c0fc69dfe5a6778b597ca);
+            
+    
+            var marker_e2844fc70b292c2cd76de8e109380778 = L.marker(
+                [20.70312, -103.38929],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_211fd2a32153a93102fb2efa76ecc895 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e6af700e226b6fd33f7484ed3ca4692f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d705825d45a4485369a2156a887fe51 = $(`<div id="html_4d705825d45a4485369a2156a887fe51" style="width: 100.0%; height: 100.0%;">CETI Colomos</div>`)[0];
+                popup_e6af700e226b6fd33f7484ed3ca4692f.setContent(html_4d705825d45a4485369a2156a887fe51);
+            
+        
+
+        marker_e2844fc70b292c2cd76de8e109380778.bindPopup(popup_e6af700e226b6fd33f7484ed3ca4692f)
+        ;
+
+        
+    
+    
+                marker_e2844fc70b292c2cd76de8e109380778.setIcon(icon_211fd2a32153a93102fb2efa76ecc895);
+            
+    
+            var marker_754244504fb6cddec103fa98515a7faa = L.marker(
+                [20.66524, -103.33268],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_5fc7d640db2beff49c6e1db934e93b8d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d7aa8871e5c27be51268b5f02798ccdd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33a3a971c430d7053b4659dffc9353d4 = $(`<div id="html_33a3a971c430d7053b4659dffc9353d4" style="width: 100.0%; height: 100.0%;">Plaza de la Bandera</div>`)[0];
+                popup_d7aa8871e5c27be51268b5f02798ccdd.setContent(html_33a3a971c430d7053b4659dffc9353d4);
+            
+        
+
+        marker_754244504fb6cddec103fa98515a7faa.bindPopup(popup_d7aa8871e5c27be51268b5f02798ccdd)
+        ;
+
+        
+    
+    
+                marker_754244504fb6cddec103fa98515a7faa.setIcon(icon_5fc7d640db2beff49c6e1db934e93b8d);
+            
+    
+            var poly_line_62e2cc12ab7973c197d683cf501bbc03 = L.polyline(
+                [[20.74178, -103.40731], [20.71218, -103.37844], [20.70312, -103.38929]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var marker_9eb1eb10d9e91ce054babd8ebe7e485b = L.marker(
+                [20.70312, -103.38929],
+                {
+}
+            ).addTo(map_0c72008edfdeae782b687870eb6bcd41);
+        
+    
+            var icon_3b0140b69116f251578ac4756f7c5a4d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_66bd2fec504b1048556a345ddb1aca6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5281cee0d5c31efdd83eda580bfcddb9 = $(`<div id="html_5281cee0d5c31efdd83eda580bfcddb9" style="width: 100.0%; height: 100.0%;">CETI Colomos (Destino)</div>`)[0];
+                popup_66bd2fec504b1048556a345ddb1aca6a.setContent(html_5281cee0d5c31efdd83eda580bfcddb9);
+            
+        
+
+        marker_9eb1eb10d9e91ce054babd8ebe7e485b.bindPopup(popup_66bd2fec504b1048556a345ddb1aca6a)
+        ;
+
+        
+    
+    
+                marker_9eb1eb10d9e91ce054babd8ebe7e485b.setIcon(icon_3b0140b69116f251578ac4756f7c5a4d);
+            
+</script>
+</html>
